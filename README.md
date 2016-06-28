@@ -26,6 +26,7 @@ Call function on KeyUp
 
 
 Include the javascript code in html page
+-----
 
 ```javascript
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

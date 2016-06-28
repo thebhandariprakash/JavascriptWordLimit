@@ -40,4 +40,5 @@ Include the javascript code in html page
             $("."+limitCount).text(limitNum - words.length);
         }
     }
-</script>```
+</script>
+```

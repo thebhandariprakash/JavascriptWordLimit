@@ -18,15 +18,15 @@ Java script word limit in HTML form fields.
 Call function on KeyUp
 --------
 
-` <form action="">
+```html <form action="">
 <input  onkeyup="limitText(this.form.user_name,'name_limit',3)" name="user_name" type="text" value="">"
 </form>
-`
+```
 
 
 Include the javascript code in html page
 
-`<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+```javascript <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script language="javascript" type="text/javascript">
     limitText = function(limitField, limitCount, limitNum){
         var words =  limitField.value.split(' ');
@@ -38,4 +38,4 @@ Include the javascript code in html page
             $("."+limitCount).text(limitNum - words.length);
         }
     }
-</script>`
+</script>```

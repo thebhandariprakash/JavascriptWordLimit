@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Javascript Word Limit</title>
+</head>
+<body>
+
+<div class="col-sm-7">
+    <form action="">
+       <strong> Name : </strong> <br >
+    <input  onkeyup="limitText(this.form.user_name,'name_limit',3)" name="user_name" type="text" value="">
+    <br> <small>(Maximum words: 3)<br>
+        You have <span class="name_limit">3</span> words left.</small><br>
+        <strong> Description 1  : </strong> <br >
+    <textarea onkeyup="limitText(this.form.description,'description_limit',30)"  name="description"  ></textarea>
+    <br><small>(Maximum words: 30)<br>
+        You have <span class="description_limit">30</span> words left.</small> <br />
+            <strong>Description 2  : </strong> <br >
+        <textarea onkeyup="limitText(this.form.description2,'description2_limit',200)"  name="description2"  ></textarea>
+        <br><small>(Maximum words: 200)<br>
+        You have <span class="description2_limit">200</span> words left.</small>
+    </form>
+</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script language="javascript" type="text/javascript">
+    limitText = function(limitField, limitCount, limitNum){
+        var words =  limitField.value.split(' ');
+        if (words.length > limitNum) {
+            words.splice(limitNum);
+            limitField.value = words.join(" ");
+        }
+        else {
+            $("."+limitCount).text(limitNum - words.length);
+        }
+    }
+</script>
+</html>
